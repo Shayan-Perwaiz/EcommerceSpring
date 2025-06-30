@@ -14,17 +14,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/categories")
 public class CategoryController {
-    private ICategoryService categoryService;
+    private final ICategoryService categoryService;
 
     public CategoryController(ICategoryService _categoryService){
         this.categoryService = _categoryService;
     }
 
     @GetMapping
-    public List<CategoryDTO> getAllCategories() throws IOException {
-        return this.categoryService.getAllCategories();
-//        List<CategoryDTO> result = this.categoryService.getAllCategories();
-//        return ResponseEntity.ok(result);
+    public ResponseEntity<List<CategoryDTO>> getAllCategories() throws IOException {
+        List<CategoryDTO> result = this.categoryService.getAllCategories();
+        return ResponseEntity.ok(result);
     }
 
 }
