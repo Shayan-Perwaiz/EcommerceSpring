@@ -39,7 +39,7 @@ The following endpoints are available for interacting with products and categori
 | GET    | `/products`                 | Retrieve all products                    |
 | GET    | `/products/{id}`            | Retrieve a product by ID                 |
 | GET    | `/categories`               | Retrieve all product categories          |
-| GET    | `/products/category/{name}` | Retrieve products by category name       |
+
 
 ### Example Requests and Responses
  
