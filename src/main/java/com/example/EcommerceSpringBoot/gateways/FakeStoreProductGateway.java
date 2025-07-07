@@ -15,7 +15,7 @@ public class FakeStoreProductGateway implements IProductGateway {
         this.fakeStoreProductAPI = fakeStoreProductAPI;
     }
     @Override
-    public ProductDTO getProductByIdGateway(int id) throws IOException {
+    public ProductDTO getProductByIdGateway(Long id) throws IOException {
         FakeStoreProductDTO response = this.fakeStoreProductAPI.getFakeProductById(id).execute().body();
         if(response == null) {
             throw new IOException("Failed to fetch a product from an Fakestore API");

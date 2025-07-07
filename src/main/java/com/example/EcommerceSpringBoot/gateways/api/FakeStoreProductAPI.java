@@ -9,5 +9,5 @@ import java.io.IOException;
 
 public interface FakeStoreProductAPI {
     @GET("products/{id}")
-    Call<FakeStoreProductDTO>getFakeProductById(@Path("id") int id) throws IOException;
+    Call<FakeStoreProductDTO>getFakeProductById(@Path("id") Long id) throws IOException;
 }

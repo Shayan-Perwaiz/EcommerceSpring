@@ -24,7 +24,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProductDTO> getProductByIdController(@PathVariable("id") int id) throws IOException {
+    public ResponseEntity<ProductDTO> getProductByIdController(@PathVariable("id") Long id) throws IOException {
         ProductDTO response = this.iProductService.getProductById(id);
         return ResponseEntity.ok(response);
     }
